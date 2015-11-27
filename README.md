@@ -13,7 +13,7 @@ The sensor I used was a SRF02 connected via the I2C interface.
 
 
 
-### Download the Linaro 14.10 Android sources
+#### Download the Linaro 14.10 Android sources
 ``` 
 export MANIFEST_REPO=git://android.git.linaro.org/platform/manifest.git
 export MANIFEST_BRANCH=linaro-android-14.10-release
@@ -28,11 +28,7 @@ cp fixed_manifest.xml .repo/manifest.xml
 repo sync
 ```
 
-### Build
-```
-./build_linaro.sh
-```
-OR
+#### Build
 ```
 source build/envsetup.sh
 lunch pandaboard-eng
