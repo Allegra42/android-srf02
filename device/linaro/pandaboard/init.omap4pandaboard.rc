@@ -1,0 +1,192 @@
+import init.omap4pandaboard.usb.rc
+
+on init
+    mkdir /mnt/media_rw/sdcard0 0700 media_rw media_rw
+    mkdir /storage/sdcard0 0700 root root
+
+    export EXTERNAL_STORAGE /storage/sdcard0
+    symlink /mnt/media_rw/sdcard0 /sdcard
+
+service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard0 /storage/sdcard0
+    class late_start
+    disabled
+
+on early-init
+    # mount debugfs
+    mount debugfs /sys/kernel/debug /sys/kernel/debug
+
+on init
+# power management
+# Enable off mode by default
+    #write /sys/kernel/debug/pm_debug/enable_off_mode 1
+
+# Enable Smart Reflex in debugfs
+    write /sys/kernel/debug/pm_debug/smartreflex/sr_core/autocomp 1
+    write /sys/kernel/debug/pm_debug/smartreflex/sr_iva/autocomp 1
+    write /sys/kernel/debug/pm_debug/smartreflex/sr_mpu/autocomp 1
+
+on post-fs-data
+    mkdir /data/media 0770 media_rw media_rw
+
+on boot
+    setprop ro.build.product omap4sdp
+    setprop ro.product.device omap4sdp
+    setprop wifi.interface wlan0
+
+on fs
+    mount_all /fstab.omap4pandaboard
+
+    # create dhcpcd dir
+    mkdir /data/misc/dhcp 0770 dhcp dhcp
+    chmod 0770 /data/misc/dhcp
+    chmod 0666 /dev/pvrsrvkm
+
+    # switch CPUfreq from performance to hotplug
+    #write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor hotplug
+    #write /sys/devices/system/cpu/cpufreq/hotplug/down_threshold 30
+
+    #Give system ownership and permission to boost clock for specified timeout
+    #Note boost_timeout cannot be changed from application because of dynamic sysfs creation. It will have default value of 3 sec.
+    chown system system /sys/devices/system/cpu/cpu0/cpufreq/boost_cpufreq
+    chmod 0664  /sys/devices/system/cpu/cpu0/cpufreq/boost_cpufreq
+
+    # Boost the CPU for 60 sec for boot optimization
+    #write /sys/devices/system/cpu/cpufreq/hotplug/boost_timeout 60000000
+    #write /sys/devices/system/cpu/cpu0/cpufreq/boost_cpufreq 1
+
+    # change permissions for alsa nodes
+    chmod 0777  /dev/snd/pcmC0D0c
+    chmod 0777 /dev/snd/pcmC0D0p
+    chmod 0777  /dev/snd/controlC0
+    chmod 0777  /dev/snd/timer
+
+    #change permissions for alsa nodes for audio modem
+    chmod 0777 /dev/snd/pcmC0D5c
+    chmod 0777 /dev/snd/pcmC0D5p
+
+    #change permissions for alsa nodes for HDMI
+    chmod 777  /dev/snd/pcmC0D7p
+
+    # change permissions for Overlay
+    chown system system /dev/video1
+    chown system system /dev/video2
+    chown system system /dev/video3
+    # change permissions for overlay managers and display devices
+    chown system system /sys/devices/platform/omapdss/display0/enabled
+    chown system system /sys/devices/platform/omapdss/display1/enabled
+    chown system system /sys/devices/platform/omapdss/display2/enabled
+    chown system system /sys/devices/platform/omapdss/display3/enabled
+    chown system system /sys/devices/platform/omapdss/display0/name
+    chown system system /sys/devices/platform/omapdss/display1/name
+    chown system system /sys/devices/platform/omapdss/display2/name
+    chown system system /sys/devices/platform/omapdss/display3/name
+    chown system system /sys/devices/platform/omapdss/overlay0/manager
+    chown system system /sys/devices/platform/omapdss/overlay1/manager
+    chown system system /sys/devices/platform/omapdss/overlay2/manager
+    chown system system /sys/devices/platform/omapdss/overlay3/manager
+    chown system system /sys/devices/platform/omapdss/overlay0/zorder
+    chown system system /sys/devices/platform/omapdss/overlay1/zorder
+    chown system system /sys/devices/platform/omapdss/overlay2/zorder
+    chown system system /sys/devices/platform/omapdss/overlay3/zorder
+    # change permissions for manager tranparency parameters
+    chown system system /sys/devices/platform/omapdss/manager0/name
+    chown system system /sys/devices/platform/omapdss/manager0/display
+    chown system system /sys/devices/platform/omapdss/manager1/name
+    chown system system /sys/devices/platform/omapdss/manager1/display
+    chown system system /sys/devices/platform/omapdss/manager2/name
+    chown system system /sys/devices/platform/omapdss/manager2/display
+    chown system system /sys/devices/platform/omapdss/overlay0/enabled
+    chown system system /sys/devices/platform/omapdss/overlay1/enabled
+    chown system system /sys/devices/platform/omapdss/overlay2/enabled
+    chown system system /sys/devices/platform/omapdss/overlay3/enabled
+    # change permissions for display timings to get the resolutions
+    chown system system /sys/devices/platform/omapdss/display0/timings
+    chown system system /sys/devices/platform/omapdss/display1/timings
+    chown system system /sys/devices/platform/omapdss/display2/timings
+    chown system system /sys/devices/platform/omapdss/display3/timings
+    chown system system /sys/devices/platform/omapdss/display2/code
+     # change permissions for Tiler driver
+    chown media media /dev/tiler
+    chmod 0660 /dev/tiler
+    chmod 0660 /dev/dmm
+
+    # Revert the boost_timeout to the default value of 3 sec. Note this won't affect the prev boost
+    # request for boot time reduction
+    # write /sys/devices/system/cpu/cpufreq/hotplug/boost_timeout 3000000
+
+    # Enable hotplug detection for HDMI
+    # write /sys/devices/platform/omapdss/display2/hpd_enabled 1
+
+    # wifi related configuration,set the right permissions
+    mkdir /system/etc/wifi 0770 wifi wifi
+    chmod 0770 /system/etc/wifi
+    chmod 0660 /system/etc/wifi/wpa_supplicant.conf
+    chown wifi wifi /system/etc/wifi/wpa_supplicant.conf
+    mkdir /data/misc/wifi 0770 wifi wifi
+    mkdir /data/misc/wifi/sockets 0770 wifi wifi
+    chmod 0770 /data/misc/wifi
+    chmod 0660 /data/misc/wifi/wpa_supplicant.conf
+    chown wifi wifi /data/misc/wifi
+    chown wifi wifi /data/misc/wifi/wpa_supplicant.conf
+    # wpa_supplicant socket (unix socket mode)
+    mkdir /data/system/ 0775 system system
+
+    chown system system /sys/class/graphics/fb0/overlays
+    chown system system /sys/class/graphics/fb0/fit_to_screen
+    chown system system /sys/class/graphics/fb1/overlays
+    chmod 0666 /dev/pvrsrvkm
+
+    insmod /system/modules/st_drv.ko
+    insmod /system/modules/bluetooth.ko
+    insmod /system/modules/bnep.ko
+    insmod /system/modules/hci_uart.ko
+    insmod /system/modules/rfcomm.ko
+    insmod /system/modules/btwilink.ko
+
+    chown system  system /sys/class/rfkill/rfkill0/type
+    chown system  system /sys/class/rfkill/rfkill0/state
+
+# TODO "wl1273-core" is needed for 3.2 kernel.Remove it once we stop
+# supporting 3.2 kernel
+    insmod /system/modules/wl1273-core.ko
+    insmod /system/modules/lib80211.ko
+    insmod /system/modules/cfg80211.ko
+    insmod /system/modules/mac80211.ko
+    insmod /system/modules/wlcore.ko
+    insmod /system/modules/wl12xx.ko
+
+# Initialize the SGX driver
+service pvrsrvinit /system/bin/pvrsrvinit
+    class main
+    user root
+    oneshot
+
+service wpa_supplicant /system/bin/wpa_supplicant \
+    -iwlan0 -Dwext -c/data/misc/wifi/wpa_supplicant.conf -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
+    #   we will start as root and wpa_supplicant will switch to user wifi
+    #   after setting up the capabilities required for WEXT
+    #   user wifi
+    #   group wifi inet keystore
+    class main
+    socket wpa_wlan0 dgram 660 wifi wifi
+    disabled
+    oneshot
+
+service dhcpcd_wlan0 /system/bin/dhcpcd -dABKL
+    group dhcp
+    disabled
+    oneshot
+
+#userspace daemon needed for bluetooth
+service uim /system/bin/uim
+    class main
+    user root
+    oneshot
+    
+service sensors /system/bin/sensorservice
+    class late_start
+   # user root
+   # group root
+    oneshot
+
+

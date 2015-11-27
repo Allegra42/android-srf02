@@ -1,0 +1,6 @@
+config SRF02_APP
+tristate "SRF02_APP"
+depends on ARM
+default y
+help
+srf02 app
