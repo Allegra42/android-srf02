@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="git://android.git.linaro.org/" name="aosp" review="review.android.git.linaro.org"/>
+  <remote fetch="https://android-review.googlesource.com/" name="aosp-upstream" review="https://android-review.googlesource.com/"/>
+  <remote fetch="https://github.com/" name="github"/>
+  <remote fetch="git://igloocommunity.org/" name="igloocommunity"/>
+  <remote fetch="ssh://mschaff@fujitsu.git.linaro.org/landing-team/fujitsu/" name="linaro-landing-team-fujitsu-git"/>
+  <remote fetch="ssh://mschaff@hisilicon.git.linaro.org/landing-team/hisilicon/" name="linaro-landing-team-hisilicon-git"/>
+  <remote fetch="git://git.linaro.org/" name="linaro-other"/>
+  
+  <default remote="aosp" revision="refs/tags/android-4.4.4_r1" sync-j="4"/>
+  
+  <project groups="pandaboard" name="arm/ds5/gator" path="external/gator" remote="linaro-other" revision="f91c77d5f2eec7631c962dcac9fa07ab604b26e4" upstream="android"/>
+  <project groups="pandaboard,imx53" name="boot/u-boot-linaro-stable" path="u-boot/linaro/u-boot-linaro-stable" remote="linaro-other" revision="43ee87aabf17e51d35a5d82848a4052e60f2c7bb" upstream="master"/>
+  <project groups="common" name="device/common" revision="6a2995683de147791e516aae2ccb31fdfbe2ad30" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="device/generic/armv7-a-neon" revision="0923313d90f03365d3fb881c3cb6d50802946b6b" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="device/generic/common" revision="11c092a6cbfcf6207f07a9a8e3398e747e7f5461" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="device/generic/goldfish" revision="f3840dad2fbe187afac1fafd715b9f392c876e94" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="device/generic/mini-emulator-armv7-a-neon" revision="77bb98e878409fb714738170a2df2df1223dd57b" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="device/generic/mini-emulator-mips" revision="2ff06dda649ba43507a911057f7854a3373ef7d6" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="device/generic/mini-emulator-x86" revision="a2f05b8c5259c232be5b029b2d5e721ba3f70917" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="device/generic/mips" revision="cba3ddadffd8f92b453b74ea1f2886df3be35314" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="device/generic/x86" revision="8933282b14fbbd2f43ff2187174fcdd22bea0ee8" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="device,common" name="device/google/accessory/arduino" revision="abc5159a3ca9dbb5c7e364a1eab99901a4440ac5" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="device,common" name="device/google/accessory/demokit" revision="7dfe7f89a3b174709c773fe319531006e46440d9" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="device/linaro/common" revision="1aeab518cfb45e9ce4ad27d0b4d5dbe0bdd8663c" upstream="linaro-kk"/>
+  <project groups="common" name="device/linaro/fujitsu" revision="72868351ff78855ecfa4425e1cff92c8c47c0e63" upstream="linaro-jb"/>
+  <project groups="common" name="device/linaro/hi4511" revision="9b467804793a0261c62ad633405a47495e57745f" upstream="linaro-jb"/>
+  <project groups="common" name="device/linaro/pandaboard" revision="db9d676ac08674e9f79f66b4c2d421cb07bf9db9" upstream="linaro-kk"/>
+  <project groups="common" name="device/linaro/vexpress" revision="c244e723c0807eaf8b39f588eeff87d3c8156452" upstream="linaro-kk"/>
+  <project groups="common" name="device/sample" revision="c162f2cce9cb4d02e7de0db6cb883b9f38526a3a" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="device/samsung/proprietary-open" revision="39a7e0eb118b559cd78ba428deb48671ab03c4f5" upstream="linaro-jb"/>
+  <project groups="common" name="device/samsung_slsi/arndale" path="device/linaro/arndale" revision="112dee242e6a1b98bd3197d1ca077ff4ebfb3b69" upstream="linaro-kk"/>
+  <project groups="common" name="device/ti/panda" revision="e5f9c5b5a11aa54cd43a0588b0ffe86b8547f50e" upstream="linaro_android_4.3.1"/>
+  <project groups="pandaboard" name="device/ti/proprietary-open" revision="124f4b454c5fd8fd1a04b18043f6d698f617fd83" upstream="ics"/>
+  <project groups="common" name="device/ti/uim" revision="20f65b810f78dd6a74ddef1aaf8e6cb5c69be9d8" upstream="android"/>
+  <project groups="common" name="hardware/linaro/common" revision="f3eccf040eae282cd0250c02f92843aad03f1c30" upstream="linaro_android_jb"/>
+  <project groups="pandaboard" name="kernel/panda" path="kernel/linaro/pandaboard" revision="da21e752f1d869e9a617c27ebd461cc04a143667" upstream="linaro-tilt-android-tracking"/>
+<!--  <project groups="common" name="people/harigopal.gollamudi/glmark2" path="packages/apps/glmark2" remote="linaro-other" revision="12b417ba3d264232dc3055ee68fd4069da9e167f" upstream="master"/> -->
+<!--  <project groups="common" name="people/harigopal.gollamudi/lava-blackbox" path="external/lava-blackbox" remote="linaro-other" revision="ea1a6752897f971a392df008d7060c9c9dddf354" upstream="master"/> -->
+  <project groups="common" name="people/neil.wong/libjpeg-turbo" path="external/jpeg" remote="linaro-other" revision="bbebcb76d74d023a0d96ad91259c749c4388ec1a" upstream="master"/>
+  <project groups="pandaboard" name="people/tomgall/piglit" path="external/piglit" remote="linaro-other" revision="fdde825f9514c3411d4a6cec62c27a6172f6affc" upstream="android"/>
+  <project groups="common" name="platform/abi/cpp" path="abi/cpp" revision="f0235f0b74958c0351d6eae4d7cdc590a4176d8e" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/art" path="art" revision="d5e4ac0abdeeb4dc13bd05a40bf496299a787536" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/bionic" path="bionic" revision="6371581acef30f2cc44265793ebdd80d2202f371" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/bootable/bootloader/legacy" path="bootable/bootloader/legacy" revision="3c491d6efb8ff2534a6934702760a6273f197918" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/bootable/diskinstaller" path="bootable/diskinstaller" revision="60d078a5924284a452a8fe739247704f8b31c754" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/bootable/recovery" path="bootable/recovery" revision="f9dd42de6034ab09f9fa649ed1fbea25bc05e598" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/build" path="build" revision="f2feb1c5a36c812cd7741d1b41164f2d8d4597e3" upstream="linaro_android_4.4.4">
+    <copyfile dest="Makefile" src="core/root.mk"/>
+  </project>
+  <project groups="common" name="platform/cts" path="cts" revision="b8e2daba969c1d0d9eb3feec9559e12db378681b" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/dalvik" path="dalvik" revision="306058e2f5775c5b9397d20850350757d763eb9c" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/developers/build" path="developers/build" revision="eb3b4f39e3ad3a48792a3845cc981c332fe6a0ad" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/developers/demos" path="developers/demos" revision="a7254542b06878f0c3b34a6c3d91b9e7d3990f74" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/developers/docs" path="developers/docs" revision="c0b835ddd9acc27176dc9a0f7d1aa2faf5d51806" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/developers/samples/android" path="developers/samples/android" revision="ed45eb8ea999b097513bd21ef73ac3b7df4b7356" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/development" path="development" revision="fc1c69874c3edb0c9ea9ba0dbbec1507a3268a96" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/docs/source.android.com" path="docs/source.android.com" revision="48fb042cf314333926a5146ee7acc004a9e953c8" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/aac" path="external/aac" revision="fa3eba16446cc8f2f5e2dfc20d86a49dbd37299e" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/android-clat" path="external/android-clat" revision="2b4cc7393268622ac3de071435a6e4ab857342df" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/android-input-bridge" path="external/android_input_bridge" revision="3a30c62190d5d598c3c76c9a239c4cb0f044f9b9" upstream="linaro-master"/>
+  <project groups="common" name="platform/external/android-mock" path="external/android-mock" revision="1922306d33d16f143d5a01daebba4e2cb477d0f5" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/ant-glob" path="external/ant-glob" revision="0f189400fd2a36bf11bfb058e7f3917eb7ed163a" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/antlr" path="external/antlr" revision="47997265eeb7d954a32ece693bbe6dab740872dd" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/apache-harmony" path="external/apache-harmony" revision="12bb45ab43a92cbac0fdb111011906e3c123abec" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/apache-http" path="external/apache-http" revision="95c6f1ba7fb55d585e5d3373d1e5acfd30a8a5ed" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/apache-qp" path="external/apache-qp" revision="64ea622b23e6612eb8e7dcae6bfd4314beb022a8" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/apache-xml" path="external/apache-xml" revision="2aee886cec3ee44b3df9fd3ab7ac6d01efd592c0" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/arduino" path="external/arduino" revision="d06daf9bbc46838400461eb8e15842974e38d82a" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="pdk,common" name="platform/external/bison" path="external/bison" revision="c2418b886165add7f5a31fc5609f0ce2d004a90e" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/blktrace" path="external/blktrace" revision="d345431f16b8f76f30a58193ff2b26d5853e1109" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/bluetooth/bluedroid" path="external/bluetooth/bluedroid" revision="b9e32f2e48629c81e617db557880e75e49245429" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/bouncycastle" path="external/bouncycastle" revision="f1d6765ce4bf870105c281c2883730c501dcee51" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/bsdiff" path="external/bsdiff" revision="23e322ab19fb7d74c2c37e40ce364d9f709bdcee" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/busybox" path="external/busybox" revision="5e84abef9654e87625b930e760c7f1227806cddf" upstream="linaro-1.21"/>
+  <project groups="common" name="platform/external/bzip2" path="external/bzip2" revision="1cb636bd8e9e5cdfd5d5b2909a122f6e80db62de" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/ceres-solver" path="external/ceres-solver" revision="399f7d09e0c45af54b77b4ab9508d6f23759b927" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common,pdk" name="platform/external/checkpolicy" path="external/checkpolicy" revision="0d73ef7049feee794f14cf1af88d05dae8139914" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium" path="external/chromium" revision="bc611cda58cc18d0dbaa8a7aee05eb3c0742e573" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/chromium-libpac" path="external/chromium-libpac" revision="f34af54bcab917eb5943d1918f32d26364f45578" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium-trace" path="external/chromium-trace" revision="8252ae6b83ea65cf871e7981e981da07379f5a0f" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org" path="external/chromium_org" revision="76d11724fbe26af7926f134538aa2b6b92360de8" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/sdch/open-vcdiff" path="external/chromium_org/sdch/open-vcdiff" revision="e485ff1fb732be2dff497b6aed11d5c0d681de82" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/testing/gtest" path="external/chromium_org/testing/gtest" revision="9881c8ebdd868a15bdefc0b01aa8b819c42076ef" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/third_party/WebKit" path="external/chromium_org/third_party/WebKit" revision="3fb1c1e2db3001008a6d8ccbe2f9345ec50363d2" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/third_party/angle" path="external/chromium_org/third_party/angle" revision="b66a170dc2a090787fc7b4d532c3f9917b6f1b83" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/third_party/eyesfree/src/android/java/src/com/googlecode/eyesfree/braille" path="external/chromium_org/third_party/eyesfree/src/android/java/src/com/googlecode/eyesfree/braille" revision="bb4c72f1deb0b8b2b0468b0bf1050462ebcf6135" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/third_party/freetype" path="external/chromium_org/third_party/freetype" revision="23757919bb752024b4120a7632866927cc9f64ec" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/third_party/icu" path="external/chromium_org/third_party/icu" revision="e937892c783e81889740c2d8193fb7c4fee7eb3e" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/third_party/leveldatabase/src" path="external/chromium_org/third_party/leveldatabase/src" revision="3a8f0f48cfd237cfc1e90158cda502cb33a3c0db" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/third_party/libjingle/source/talk" path="external/chromium_org/third_party/libjingle/source/talk" revision="5bee9ae499d9427e1a7ce513c5bf49090a487135" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/third_party/libphonenumber/src/phonenumbers" path="external/chromium_org/third_party/libphonenumber/src/phonenumbers" revision="de6af28b9f9f34a31ffb7772b7510fd215a0814e" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/third_party/libphonenumber/src/resources" path="external/chromium_org/third_party/libphonenumber/src/resources" revision="8f194ead1ebd76ebb28b7e2dfc0a7baddc62bb22" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/third_party/mesa/src" path="external/chromium_org/third_party/mesa/src" revision="638e9ad8cc1ec1c1fcd9caeb26be9daec073cfac" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/third_party/openssl" path="external/chromium_org/third_party/openssl" revision="e2f305e33738dce97dd563d748ac8d8897828e05" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/third_party/opus/src" path="external/chromium_org/third_party/opus/src" revision="2e9d78360501420fdfa0a69b879770aeb081de2c" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/third_party/ots" path="external/chromium_org/third_party/ots" revision="c49aaa128f71eb5ec85d2fe3b6fd561420cdc633" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/third_party/sfntly/cpp/src" path="external/chromium_org/third_party/sfntly/cpp/src" revision="58f132533b4126b00bc71fd9aed69ecf568cdf39" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/third_party/skia/gyp" path="external/chromium_org/third_party/skia/gyp" revision="ede6a6758a3a0a1fced76f85ff54b2045ef2e25e" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/third_party/skia/include" path="external/chromium_org/third_party/skia/include" revision="b38bb2f9a4ebdd3b424a2a5c7117be014e79f326" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/third_party/skia/src" path="external/chromium_org/third_party/skia/src" revision="b7fe988411ff99debd6d41e4f218a00b6b3553cb" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/third_party/smhasher/src" path="external/chromium_org/third_party/smhasher/src" revision="262a4a0c4ba340e863c7e693672156ff2fee0715" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/third_party/yasm/source/patched-yasm" path="external/chromium_org/third_party/yasm/source/patched-yasm" revision="c580f3c787d8ad2dcccceb4438b7572d9713a296" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/tools/grit" path="external/chromium_org/tools/grit" revision="36d23aad1af37916cdbbca554faa31a509ac1064" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/tools/gyp" path="external/chromium_org/tools/gyp" revision="f5fb80afb259f33357c7a90d78d9398904e036c1" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/chromium_org/v8" path="external/chromium_org/v8" revision="8c95dff23f1151f9e58e302068fb4e0ec83eb5f9" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/clang" path="external/clang" revision="190f554199026399d8c8fbebbcbb9c6227829901" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/compiler-rt" path="external/compiler-rt" revision="7cba5f1d950495b02bc8da53d27bdbb1b0d4f117" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/dexmaker" path="external/dexmaker" revision="7b6b3f784cdb5028dc0f2d85a02f355249eafbee" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/dhcpcd" path="external/dhcpcd" revision="84b7252b0a9d0edc9a1db1e0c518771d26b23058" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/dnsmasq" path="external/dnsmasq" revision="059965d750de815358fc450989481410b5071d64" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/doclava" path="external/doclava" revision="d9f572f57a02aa58839469d7e79fc2af64819ce2" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/droiddriver" path="external/droiddriver" revision="21a0001e2426644dd68e6140b5873ebaeafcc3dc" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/dropbear" path="external/dropbear" revision="a34ddbe3819bc465968f3676c734b405e655f8b7" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/e2fsprogs" path="external/e2fsprogs" revision="3567321e376c60d42b38e97bba8011c6ca61edbf" upstream="linaro-1.42.9"/>
+  <project groups="common" name="platform/external/easymock" path="external/easymock" revision="c9a234086537e5fd820b110bbd99e3cdc695004c" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/eclipse-basebuilder" path="external/eclipse-basebuilder" revision="6134da6347cc997e0cf2921aaadfb46f21c05d85" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/eclipse-windowbuilder" path="external/eclipse-windowbuilder" revision="a5f3ee137e94737538ec3bdf9b3716765d178c17" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/eigen" path="external/eigen" revision="b015e75e8c7ba1ab4ddb91e9372a57e76f3fd159" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/elfutils" path="external/elfutils" revision="540da1c35be501a8d4f69435d45459b393bea20b" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/embunit" path="external/embunit" revision="9265a3300d4b2f1e4964358139248e75e60e9b8f" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/emma" path="external/emma" revision="77c73b8b1a0c9e33bf48ebc3212d439e46d3094d" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/esd" path="external/esd" revision="224a67f2683a7ee997179fc5dd16115e39987b0f" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/expat" path="external/expat" revision="0af0cb3bc7519e567bd9daff3dcd315ab0134a99" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/eyes-free" path="external/eyes-free" revision="16bd4c7a4d1bfe229068b637614dad7c48dd2ceb" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/fdlibm" path="external/fdlibm" revision="0da5f683c9ddc9442af3b389b4220e91ccffb320" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/ffmpeg" path="external/ffmpeg" revision="3117afd1cd8191883ac61e80b282193a7bf9c417" upstream="linaro-0.11.1"/>
+  <project groups="common" name="platform/external/flac" path="external/flac" revision="9aad9a2b9f7f54dd9ba65d7577afa0a9fe77869e" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/freetype" path="external/freetype" revision="d4d1a7186594cc74b4bde0109e784868a200bbec" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/fsck_msdos" path="external/fsck_msdos" revision="17a1471db8c528cd9d44ec4385d2eb3614138856" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/ganymed-ssh2" path="external/ganymed-ssh2" revision="d3724dabc1cfbacd105fe6c422b4dcba80e4fb2d" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/gcc-demangle" path="external/gcc-demangle" revision="9241386b62c353302c2f9eccda0672685b252b4d" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/genext2fs" path="external/genext2fs" revision="e11a9c7fe6f1cef99aad2f25afaea37b72fe9f93" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/giflib" path="external/giflib" revision="9aef3ea079a57c98a9207f8c3b95a5dc08ee74b5" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/google-diff-match-patch" path="external/google-diff-match-patch" revision="cecbe12841337860291c2d6a5728b681ec5fca2a" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/grub" path="external/grub" revision="5c3bee7defca81362e98cf8fbd6c20cf47dff00b" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/gtest" path="external/gtest" revision="ac292f075409bc5e2674617acd4fa2830ce687c3" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/guava" path="external/guava" revision="87ffc45d2619a0c178a058de887e3050bb577efe" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/hamcrest" path="external/hamcrest" revision="69985f92e2ce80184915655cd0d3dfea78a39900" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/harfbuzz" path="external/harfbuzz" revision="858f2d28ac741ef139f74bdbdbcefa7560f17c91" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/harfbuzz_ng" path="external/harfbuzz_ng" revision="3309edccdbc2a92eb03a285abb27c1c1c4a88e43" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/htop" path="external/htop" revision="221387e7d6bc6b5a189e553daed29696ec1b85a5" upstream="linaro_android"/>
+  <project groups="common" name="platform/external/hyphenation" path="external/hyphenation" revision="bfa84834dfeb7fe8d058c2e7e07b5981451ddf82" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/icu4c" path="external/icu4c" revision="18668f3b015a110275f5cc9a8722b2f65f3333bf" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/iozone" path="external/iozone" revision="b5b711759825153e93a7b411f22bc6506d37874e" upstream="linaro_android"/>
+<!--  <project groups="common" name="platform/external/iproute2" path="external/iproute2" revision="2a92f6d14e52a8b3308fa0c6abeaffd198a1109b" upstream="linaro_android_4.4.4"/> -->
+  <project groups="common" name="platform/external/ipsec-tools" path="external/ipsec-tools" revision="f4cb1ee4b00abbfb6f968dc25818c23b4b47e584" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/iptables" path="external/iptables" revision="08beb2ced957124736cfe74e07032841a6dc6d19" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/iputils" path="external/iputils" revision="c1557ff2ef6343079daf6e461b942e94abd07cf6" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/jack" path="external/jack" revision="5ceb2025ac5d25ed48183ac2d3dac4691fe761fb" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/javasqlite" path="external/javasqlite" revision="3b4db8854c911edfd02f5c6b8ef625084a0f5a93" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/javassist" path="external/javassist" revision="9566207cff5871c672fac1f0d4332d93292036d7" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/jdiff" path="external/jdiff" revision="e4694302d6a3786c64d954e0b3cf42786283bd3c" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/jhead" path="external/jhead" revision="acbfc9c1c7e1a84b0db4dc5bc3d5346b6c55c473" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/jmdns" path="external/jmdns" revision="f4eb7466d5c09098f9dc54137ed3235e3c43fc9f" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/jmonkeyengine" path="external/jmonkeyengine" revision="a6b44658eb1c55295f132a36233a11aa2bd8f9cf" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/jsilver" path="external/jsilver" revision="601ffd7efb82f3dce1c1840b5f8e6c759414cdd1" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/jsr305" path="external/jsr305" revision="a82868820d6350811b9ddfde4bf8ed5016084269" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/junit" path="external/junit" revision="0f6a0982a8d63280e7139c4e116df08d5708173b" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/kernel-headers" path="external/kernel-headers" revision="908d3fd0e36f0ce4670003975da491b71c9401ff" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/libcap-ng" path="external/libcap-ng" revision="1d1011a3c5049a7f9eef99d22f3704e4367579cc" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/libexif" path="external/libexif" revision="25d371312cee1452a2adcf8b7f6cad6267bda32d" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/libffi" path="external/libffi" revision="bcb9a592a47ec641d7cec89e10fcf556132713aa" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common,pdk" name="platform/external/libgsm" path="external/libgsm" revision="50761abed8f4734970874165b386cfd4d9599db4" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/liblzf" path="external/liblzf" revision="6946aa575b0949d045722794850896099d937cbb" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/libmtp" path="external/libmtp" revision="7075348937f6a8c9d9211942fcb6c376f4227776" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/libnfc-nci" path="external/libnfc-nci" revision="1ba9dcccf5b342bd74a2f8213b7ed3be78b9db44" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/libnfc-nxp" path="external/libnfc-nxp" revision="9e987ccb716624d658f98abc7db2097e11e3d8ed" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/libnl" path="external/libnl" revision="66942b9142f4331a7d730a6121a1170e5b51ed59" upstream="linaro-libnl2_0"/>
+  <project groups="common" name="platform/external/libnl-headers" path="external/libnl-headers" revision="6c175b087570a8922fcb8d00cd10048801787a3b" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/libogg" path="external/libogg" revision="ec0b24fb1468abe37be4164a6feb16568e036bde" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/libpcap" path="external/libpcap" revision="3a7bce5dda6a8db92c9248846d0255e68c3a5b2a" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/libphonenumber" path="external/libphonenumber" revision="485e6d5c6e48a1fc43cc0a090e687c723dac056c" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/libpng" path="external/libpng" revision="b5e7fb4c103b3898cb78e9f7615cf7893626a5e9" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/libppp" path="external/libppp" revision="706e567fc5ff6b79738a5f470e5aa7b2cae76459" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common,pdk" name="platform/external/libselinux" path="external/libselinux" revision="8b4760949bbafdee6f7825f39423f3db745f4115" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common,pdk" name="platform/external/libsepol" path="external/libsepol" revision="8fd7c65a336d45d5225f32363a9f26c1e3e60c3c" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/libssh2" path="external/libssh2" revision="2bb40f2445cab3ba588efb29e1835cdba2b27248" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/libusb" path="external/libusb" revision="2801917fe150393d4f4a354165fe89550ae22613" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/libusb-compat" path="external/libusb-compat" revision="94867ba54eb7faa8efca81cf2214d00bb9143d27" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/libvorbis" path="external/libvorbis" revision="de559619fd4dd0d2d9608436696fd44bdf74eba8" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/libvpx" path="external/libvpx" revision="9b35249446b07f40ac5fcc3205f2c048616efacc" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/libxml2" path="external/libxml2" revision="a2bb4a267ee7c62c48bf6089e3da51d8283a97f3" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/libxslt" path="external/libxslt" revision="98f5140c33273d3bd67ca03566f8417406001016" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common,libyuv" name="platform/external/libyuv" path="external/libyuv" revision="482a582884351288fb701532359652970b1ba7c0" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/linaro-android-tools" path="external/linaro-android-tools" revision="7344816517e646fdaac97acb5bcb2065e6bde9ed" upstream="master"/>
+  <project groups="common" name="platform/external/linux-tools-perf" path="external/linux-tools-perf" revision="5c7e7c26f9125b629f11dc124031b6fc01e8b530" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/littlemock" path="external/littlemock" revision="328b01eada8965cd38feea884d4080c31e3763b0" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/llvm" path="external/llvm" revision="90b48afbae1d70d7e5b6d3fdfbc7304e75e30695" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/lrzsz" path="external/lrzsz" revision="3d23b85dd8e58ff5a697957c7fdfe2706e8cbf41" upstream="linaro-master"/>
+  <project groups="common" name="platform/external/lzma" path="external/lzma" revision="baa3858d3f5d128a5c8466b700098109edcad5f2" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/marisa-trie" path="external/marisa-trie" revision="629ed059b1e85cd8e4de363d8b3dc53c15c3e08a" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/markdown" path="external/markdown" revision="6f2e3554ae38cc90518d32e02cb57d05988270a6" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/mdnsresponder" path="external/mdnsresponder" revision="c46f53f5e072f23051c4eedef730386f7634dc11" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/memtester" path="external/memtester" revision="1a168610f7ed3802f15842e5f25f2789b67ed99a" upstream="linaro_android"/>
+  <project groups="pandaboard" name="platform/external/mesa3d" path="external/mesa3d" revision="b9ba3f4ef0bc010edf2999fe4ac1ac7883bc288a" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/mksh" path="external/mksh" revision="f8c396c4d446a038358106a301b329607a04633d" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/mockito" path="external/mockito" revision="34f80a94e45f7110ec3444c1d0ecfacc194d009a" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/mockwebserver" path="external/mockwebserver" revision="e44762f71ed6eeb718a0bb6f3848beb7696fd97d" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/mp4parser" path="external/mp4parser" revision="16051e950485c6b62127c0446a760111de1a0cb9" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/mtpd" path="external/mtpd" revision="141f77c33bb1f6e4e19b7baff08d963f341e9eb7" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/naver-fonts" path="external/naver-fonts" revision="9238a39d60763f81b98d96f02b087d52b9d4fd52" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/ncurses" path="external/ncurses" revision="5fc466743430377a29b0dc6a38b0d1de843581e7" upstream="linaro"/>
+  <project groups="common" name="platform/external/netcat" path="external/netcat" revision="444644cfa9a2f3002863caa168fb2d6b34dfd1e8" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/netperf" path="external/netperf" revision="58ecd3b7c76263900e38921360e334a416aec362" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/neven" path="external/neven" revision="a800c667ea0839a5b28931270cd78385533e6c9d" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/nfacct" path="external/nfacct" revision="7681b279a14d3e1e93ed5f336de7e3a8789cba77" upstream="linaro"/>
+  <project groups="common" name="platform/external/nist-pkits" path="external/nist-pkits" revision="ad3f12ec91a6b419bbf4b24b619ed39bf04589ea" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/nist-sip" path="external/nist-sip" revision="b23dbfce7ea84c39cea75b612868a5832cb9af2b" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/noto-fonts" path="external/noto-fonts" revision="90372d894b5d9c9f2a111315d2eb3b8de1979ee4" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/oauth" path="external/oauth" revision="bc170f58de82000ed6460f111686a850a1890c07" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/objenesis" path="external/objenesis" revision="e8740d2e04179cd15a85dd055cac90b5aeb52589" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/okhttp" path="external/okhttp" revision="49d9ce3394234904623bdcc8d781017e58008a37" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/open-vcdiff" path="external/open-vcdiff" revision="6d29f2f083baf8250db94ed0b4807e513a84163d" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/opencv" path="external/opencv" revision="1691b57dbad9cfc15b9a8b72f8b376733b934ffe" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/openfst" path="external/openfst" revision="5bf56ba7027cd5f22ff52d0138893f7a585135fb" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/openssh" path="external/openssh" revision="d2a912f39de1c2ba2a2d8f37c673eeb1c2b41b99" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/openssl" path="external/openssl" revision="ba26ea216044b3890cbc65940b3852d9cc6eafe9" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/oprofile" path="external/oprofile" revision="722e547dccd88b4e28c6d2a88cd37dd4eef97f9e" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/pixman" path="external/pixman" revision="70005f9fa14753353faf0fe2e57359913ed3e75a" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/pm-qa" path="external/pm-qa" revision="34dfa57b0b58fd3c471e4d01e0d65391fc801477" upstream="android"/>
+  <project groups="common" name="platform/external/powerdebug" path="external/powerdebug" revision="781dc31aa3c86fcd97ebf686142f4436761f79c6" upstream="android"/>
+  <project groups="common" name="platform/external/powertop-2.0" path="external/powertop" revision="7080c91c2d43671b3c05edec340a8ab43915367e" upstream="android"/>
+  <project groups="common" name="platform/external/ppp" path="external/ppp" revision="2e50db22360222a36f5a32eeabdf0daec39c61a9" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/proguard" path="external/proguard" revision="54f59ac04f3e21d5aecdd46bb1e7f4577924ab92" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/protobuf" path="external/protobuf" revision="48ee66d295979372ed0234cefda42385daae8312" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/qemu" path="external/qemu" revision="454ca73c639991990eb97784c708156e4b2072c2" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/qemu-pc-bios" path="external/qemu-pc-bios" revision="20349dae98d7de09a7e390d4a706c64f1db6edc2" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/regex-re2" path="external/regex-re2" revision="0d4c52358a1af421705c54bd8a9fdd8a30558a2e" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/replicaisland" path="external/replicaisland" revision="99e2e54c5d036048caf09bb05eea0969de093104" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/robolectric" path="external/robolectric" revision="6bf395c984ed3f69711663b006aeffbb0f7e8a90" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/safe-iop" path="external/safe-iop" revision="aa0725fb1da35e47676b6da30009322eb5ed59be" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/scrypt" path="external/scrypt" revision="eb05b73c3bba21fff55529813109de4bad5ddbd1" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common,pdk" name="platform/external/sepolicy" path="external/sepolicy" revision="9702e49307aa738508bb0949bac3000fe9ec5a0d" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/sfntly" path="external/sfntly" revision="30d4e1f3d81ad9f7a1aa14ce6d2ceb5df56c15cd" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/sil-fonts" path="external/sil-fonts" revision="795a2f4339f8a82d6cff187e2a77bb01d5911aac" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/skia" path="external/skia" revision="1adfb847fe565e53d2e26e35b04c8dc112b7513a" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/smack" path="external/smack" revision="d7955ce24d294fb2014c59d11fca184471056f44" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/smali" path="external/smali" revision="f3d921d1f8eb52f20440a0e43f604a7aae972e94" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/sonivox" path="external/sonivox" revision="4c1a5b0ff8637509117592ec531483e7dbb4a2e7" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/speex" path="external/speex" revision="b1d80753f24f4fc5e04246ea1f056ac46552cadf" upstream="linaro_mmwg"/>
+  <project groups="common" name="platform/external/sqlite" path="external/sqlite" revision="82be6d546803fdf116c4d2b9e534559e32598288" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/srec" path="external/srec" revision="0930779b0ed162659461fa90ccb698b811bdfe02" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/srtp" path="external/srtp" revision="c9e44e6bd5503e1dcd0c19b02763a673664a17f2" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/stlport" path="external/stlport" revision="f71355ab704fe249f4c209967cafc11e883722aa" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/strace" path="external/strace" revision="1a4e05d53dec658a061acb9869cb1eb1342cd09d" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/stress" path="external/stress" revision="f810fccc3dfcfd893da596a72df7b8e98cb04ca3" upstream="linaro_android"/>
+  <project groups="common" name="platform/external/stressapptest" path="external/stressapptest" revision="d12d97fbbf24ef78f579f723f25791f94cac4176" upstream="linaro_android"/>
+  <project groups="common" name="platform/external/svox" path="external/svox" revision="838228cc17b5798e51bc20d06e54dbd781e441db" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/tagsoup" path="external/tagsoup" revision="68c2ec9e0acdb3214b7fb91dbab8c9fab8736817" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/tcpdump" path="external/tcpdump" revision="43a64c6867a81b193f5d9d68ab557db0f2457e7a" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/thirdparty-benchmarks" path="external/thirdparty-benchmarks" revision="c484d032d373666d20ec2ce1d4094d00386340e6" upstream="master"/>
+  <project groups="common" name="platform/external/timezonepicker-support" path="external/timezonepicker-support" revision="99e91a76fd74bad10266623d67cdb98d011f709e" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/tinyalsa" path="external/tinyalsa" revision="c98da79067d89d934c4eb7de6a03e412eb421a5c" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/tinycompress" path="external/tinycompress" revision="d848221e947b4a71fe47423c60461b0a031aabc8" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common,pdk" name="platform/external/tinyxml" path="external/tinyxml" revision="494e448824844d866e805831d1d5f5acb654065c" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/tinyxml2" path="external/tinyxml2" revision="c74b546f5af36968ffa56d7fd4529f4273b96f48" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/tools_for_pm-qa" path="external/tools_for_pm-qa" revision="a7bb4bb5b3367a23d2c45d10ce6453e1af9becf1" upstream="master"/>
+  <project groups="common" name="platform/external/tremolo" path="external/tremolo" revision="94933c856bc90e755a373ef0a84d2de7326e3b32" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/v8" path="external/v8" revision="8b5aad405810aa50e0085329cc1b6d143035ae50" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/valgrind" path="external/valgrind" revision="a9e44692ff649edae6bade0e92bdcfe2f2645391" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/webp" path="external/webp" revision="513e97bd307573e2adc776eb5368bd129aceaa4a" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/webrtc" path="external/webrtc" revision="e36ff585168b616b9ef81d3cdb1349e87a65ef92" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/wpa_supplicant_8" path="external/wpa_supplicant_8" revision="2a752da5bd59a67ff21e4adb58c87331f5acf46c" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/external/x264" path="external/x264" revision="5da24c6768d352d8471d3731540f8cef9979104e" upstream="linaro-master"/>
+  <project groups="common" name="platform/external/xmlwriter" path="external/xmlwriter" revision="e95d92246ee35273dde2bee8b00485cc14c12be5" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/xmp_toolkit" path="external/xmp_toolkit" revision="42ea4dc6d1fc2206a7778029070ed9213e3b0fbf" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/yaffs2" path="external/yaffs2" revision="a2cff2275e1b501ff478b03757d6e4f05fddc2db" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/zlib" path="external/zlib" revision="a5c7131da47c991585a6c6ac0c063b6d7d56e3fc" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/external/zxing" path="external/zxing" revision="7620644768ffc235607b3a94671e49518c18686f" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/frameworks/av" path="frameworks/av" revision="2bd7d886a53c8f1dbcb53b0da54d2ddccd0b8037" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/frameworks/base" path="frameworks/base" revision="66f28b448158de9f3253892e08857815c6ab469e" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/frameworks/compile/libbcc" path="frameworks/compile/libbcc" revision="c952d877069bbb322d8b8362232e0c07a7e8ad1e" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/frameworks/compile/mclinker" path="frameworks/compile/mclinker" revision="89a5648fcb366adb25b75aa69a7ad9a34842dd17" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common,pdk" name="platform/frameworks/compile/slang" path="frameworks/compile/slang" revision="98f322d52357ce509835e5f9bcbdd16087c2e019" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/frameworks/ex" path="frameworks/ex" revision="6f3f66a5736c32f333133f69a25a1668c7b7abec" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/frameworks/mff" path="frameworks/mff" revision="b9669b8540a1e5c953374d53b115514335e23c27" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/frameworks/ml" path="frameworks/ml" revision="5072d507df1fd827ac7b15900c1f113949f76f12" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/frameworks/native" path="frameworks/native" revision="1eab94ce65e1a8a05d07ff9e822fd322155e67f3" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/frameworks/opt/calendar" path="frameworks/opt/calendar" revision="03b18577f8f8f799e87a62b8e03889ddacf6daa2" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/frameworks/opt/carddav" path="frameworks/opt/carddav" revision="f08aa2df132dd8dc32a0013d3750137d9dd9280a" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/frameworks/opt/colorpicker" path="frameworks/opt/colorpicker" revision="bd624b68751a0bc3255e46e3a49c7032588b2385" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/frameworks/opt/datetimepicker" path="frameworks/opt/datetimepicker" revision="1100c53593ce64b58dc191d06e2aa1da9f6b84fb" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/frameworks/opt/emoji" path="frameworks/opt/emoji" revision="dbbe673145107e99883f62bafd70c5f43f11065c" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/frameworks/opt/inputmethodcommon" path="frameworks/opt/inputmethodcommon" revision="df9dd39c2047992a43b64e13bb0fc348a1630f3b" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/frameworks/opt/mailcommon" path="frameworks/opt/mailcommon" revision="15ecba0f8258e3c7d88defdad014c3f3a86d44e9" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/frameworks/opt/mms" path="frameworks/opt/mms" revision="ee25d0e52b2d7e6f6604e1e16c7d98c406ca9f41" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/frameworks/opt/net/voip" path="frameworks/opt/net/voip" revision="ae2d609b6a1ab4efa45c58c1a64bbf008ec01601" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/frameworks/opt/photoviewer" path="frameworks/opt/photoviewer" revision="38a4f0ef3dbe5a350cf243281b9562c6a6bf8ee5" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common,pdk" name="platform/frameworks/opt/telephony" path="frameworks/opt/telephony" revision="c187f0e9bfb897405d6c41f669fc2aadacb0ee1e" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/frameworks/opt/timezonepicker" path="frameworks/opt/timezonepicker" revision="8aedf9412532499dddcd965050bb5ac654d83834" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/frameworks/opt/vcard" path="frameworks/opt/vcard" revision="5f55ee296e26d5278fd0d91657edddc92766459e" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/frameworks/opt/widget" path="frameworks/opt/widget" revision="466e0e0307b3f6aa4f4be3d9419b5996bd389da5" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/frameworks/rs" path="frameworks/rs" revision="edb8dea2e13ecb5818ec6a82fa1f53d0ae3b7f4e" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/frameworks/support" path="frameworks/support" revision="197708fc4fc0a6a5ede2da2479613382b561f028" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/frameworks/testing" path="frameworks/testing" revision="abc9b55fa34639dd39c58a03c6c21d265ec84a23" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/frameworks/volley" path="frameworks/volley" revision="bd04632e0c5b4a29889c1b70089ac2322229b5e6" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/frameworks/webview" path="frameworks/webview" revision="7a7dce808e1545e859b80b86f0279ee68ce3f0cc" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/frameworks/wilhelm" path="frameworks/wilhelm" revision="0a7af5cb3b456caab114641027ab0a42a576639a" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/hardware/akm" path="hardware/akm" revision="6d3be412647b0eab0adff8a2768736cf4eb68039" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common,pdk" name="platform/hardware/broadcom/libbt" path="hardware/broadcom/libbt" revision="1a25e8cff80c989fa1c924829bdb37fd27e62f1d" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/hardware/broadcom/wlan" path="hardware/broadcom/wlan" revision="1a9a2792207bcd6d171d9a023b1bc45c3818aa4a" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/hardware/invensense" path="hardware/invensense" revision="e6d9ab28b4f4e7684f6c07874ee819c9ea0002a2" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/hardware/libhardware" path="hardware/libhardware" revision="87730fd9f0d8288dc858c2be6d48dbf84d2618f9" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/hardware/libhardware_legacy" path="hardware/libhardware_legacy" revision="a31e8d66803f0fc05dab12b2ef84448fb7fc511a" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/hardware/linaro/tinyhal" path="hardware/linaro/tinyhal" revision="14100e871ee8c5f2d5611fcd587183ab013c602e" upstream="linaro-jellybean"/>
+  <project groups="common" name="platform/hardware/ril" path="hardware/ril" revision="96945b7536c904eacb9886edb8811fdfb39b9451" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/hardware/samsung/origen/gralloc_ump" path="hardware/samsung/origen/gralloc_ump" revision="4442f7ef7b4804b39c18a7f4856eaaaf336c14dc" upstream="linaro_android_jb"/>
+  <project groups="common" name="platform/hardware/samsung/origen/ump" path="hardware/samsung/origen/ump" revision="02c4f7f1b6666f57ca99e921c3c30311d5571648" upstream="linaro_android_jb"/>
+  <project groups="common" name="platform/hardware/samsung_slsi/exynos5" path="hardware/samsung_slsi/exynos5" revision="997dc1872884f621824667ece1f31ec8b522ff9c" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/hardware/ti/omap3" path="hardware/ti/omap3" revision="3bbaa29066a684d01df42ddf0365266e59f2dc44" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/hardware/ti/omap4xxx" path="hardware/ti/omap4xxx" revision="9e33aafbd806717b0f7605cf0630abb62e836e32" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/hardware/ti/wlan" path="hardware/ti/wlan" revision="495914562a315a5152780709ab622cd987561de5" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/hardware/ti/wpan" path="hardware/ti/wpan" revision="9fc27663273414cee93f5219d48a28fe84b0bb7e" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/libcore" path="libcore" revision="3edf5505724c0c1a4168a038f18b3ba7be69965e" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/libnativehelper" path="libnativehelper" revision="7680ed0fb7253f99a4dcafcd54bbb86a7c24f1d2" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/ndk" path="ndk" revision="e58ef003be4306bb53a8c11331146f39e4eab31f" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/0xbench" path="packages/apps/0xbench" revision="38fdb440f4a1b47a07987c0f1c5ad61f2447cb16" upstream="linaro-master"/>
+  <project groups="common" name="platform/packages/apps/BasicSmsReceiver" path="packages/apps/BasicSmsReceiver" revision="65279674311f70615fb9d2bac8bb2df2189966a5" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/Bluetooth" path="packages/apps/Bluetooth" revision="24dce60783d85fbf49f550203a383b2f4a171a52" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/Browser" path="packages/apps/Browser" revision="c64a55dea1445bc5d88756a74cae32fa1b0fb533" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/Calculator" path="packages/apps/Calculator" revision="d89ea8c8bf7ea7fec0f2a394864b9e2d32488b64" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/Calendar" path="packages/apps/Calendar" revision="aabff4d41c4885f57a41bed7d5d269d714061bba" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/Camera" path="packages/apps/Camera" revision="1ef548e14e6d086246df8bacbfcd0ff9557a388c" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/packages/apps/Camera2" path="packages/apps/Camera2" revision="9d8187cbdb82e36eae9a42eefda138b6d0925b1f" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/CellBroadcastReceiver" path="packages/apps/CellBroadcastReceiver" revision="3ff0d90dfdf293ec98f99bd99a3ff38ae9eff73b" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/CertInstaller" path="packages/apps/CertInstaller" revision="88064ddf52b7137e47176906f30a508d72fd3491" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/Contacts" path="packages/apps/Contacts" revision="3ec9a85f41e023f924f10ae062088572911f5c81" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/ContactsCommon" path="packages/apps/ContactsCommon" revision="b2e8cd6ea7087cc279942230e96121f3a0840dbc" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/DeskClock" path="packages/apps/DeskClock" revision="3420f138f0128ce987bea668a126ba84bde7e885" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/Dialer" path="packages/apps/Dialer" revision="97794b6c991a71d9bd1b490a17f7f199f06c5a1f" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/DisableSuspend" path="packages/apps/DisableSuspend" revision="f652cc59ebbc1bcc715572a24a2cc03882811a11" upstream="master"/>
+  <project groups="common" name="platform/packages/apps/Email" path="packages/apps/Email" revision="8efa01d0e9c281a474203d4f38f9cb502e01d598" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/Exchange" path="packages/apps/Exchange" revision="d4ce0606b08f1c2f33a462985c3b2f29f9a29a50" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/Gallery" path="packages/apps/Gallery" revision="9c2be75745e1b208eb9677e9723818feb3b48d8f" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/Gallery2" path="packages/apps/Gallery2" revision="09fbf3517a9be35e180f056ed0ffbc280e7c5087" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/HTMLViewer" path="packages/apps/HTMLViewer" revision="be6aab13c62ab5d5c91262c8188521cbc4262349" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/InCallUI" path="packages/apps/InCallUI" revision="45ab8271320237aefe1c172908a99007007c98d3" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/KeyChain" path="packages/apps/KeyChain" revision="ae2704a8c9611ef3ad0c348a41074a2ef21812fa" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/Launcher2" path="packages/apps/Launcher2" revision="784305b135f280d29f51b0ae7caf602248227079" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/Launcher3" path="packages/apps/Launcher3" revision="aebea1b0627df202e5c05d818b368909ebe0dbf0" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/LegacyCamera" path="packages/apps/LegacyCamera" revision="b213c5ebc5335547d4a4178bdbd379c8b5f2c9fd" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/packages/apps/Mms" path="packages/apps/Mms" revision="07d8670a037ba382225fd4b6cb4489ef6c6b35c5" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/packages/apps/Music" path="packages/apps/Music" revision="5d33552c864395d2025e472631b4786a0b8e2af3" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/MusicFX" path="packages/apps/MusicFX" revision="11bdc2102830382f2b71f43decfd8a8bca050617" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/Nfc" path="packages/apps/Nfc" revision="d755ed47fb9b365d45e8e923e86d4cf70fd42782" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/OneTimeInitializer" path="packages/apps/OneTimeInitializer" revision="01e429c08e51291315890de9677151a7e0b6ad35" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/PackageInstaller" path="packages/apps/PackageInstaller" revision="cbdce6958b3175342a07125135ccb75a24a44910" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/Phone" path="packages/apps/Phone" revision="e653803efc363b0908cdb1853e1f020b250d3157" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/PhoneCommon" path="packages/apps/PhoneCommon" revision="16f62c5ab5c21981e63d678187ad4b44e686332b" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/Protips" path="packages/apps/Protips" revision="e953b2f84febfbc415951e83ecff40d265deab81" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/Provision" path="packages/apps/Provision" revision="78ca0db658fe6253d506916e36319e620476f809" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/QuickSearchBox" path="packages/apps/QuickSearchBox" revision="b9f6019f400799c51c526af5293cf334d778fa3d" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/Settings" path="packages/apps/Settings" revision="6629b448e5652b8e93aaf709d7de915c60de5cf9" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/packages/apps/SmartCardService" path="packages/apps/SmartCardService" revision="29eae320a4bd222b5ff1c092f84f1aebba88d0b7" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/SoundRecorder" path="packages/apps/SoundRecorder" revision="4af823cca0f9b3869abee13edd13e02ea8ec5245" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/SpareParts" path="packages/apps/SpareParts" revision="4db997871e3f4c3f84660815096e5276b47c5c91" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/SpeechRecorder" path="packages/apps/SpeechRecorder" revision="536aa74ff3a77186bef29dc9333a34688fa59d13" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/Stk" path="packages/apps/Stk" revision="a60177b7ee2fe77bd80389ad471d125e7969db17" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/Tag" path="packages/apps/Tag" revision="bc405e761fb445de8966312c627e174e46625936" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/UnifiedEmail" path="packages/apps/UnifiedEmail" revision="b0c0eb5bc71ed7a0a51e1ed1de503be7ec061bd9" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/VideoEditor" path="packages/apps/VideoEditor" revision="3163fb88a994a50b7d5e93dc5395b6a37ad7718b" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/apps/VoiceDialer" path="packages/apps/VoiceDialer" revision="fcd3869f7da95200fb4fbc485e77dfd6df5dd186" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/experimental" path="packages/experimental" revision="ecbf323e538156e0a57a8255cb92e8891a6e241a" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/inputmethods/LatinIME" path="packages/inputmethods/LatinIME" revision="47f7b0c1958392e60ac1ed2bde5322a1569f8677" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/packages/inputmethods/OpenWnn" path="packages/inputmethods/OpenWnn" revision="fa2c9c700f15cd4826ff4018d67ecd1bcd0f18f8" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/packages/inputmethods/PinyinIME" path="packages/inputmethods/PinyinIME" revision="40056ae7c2757681d88d2e226c4681281bd07129" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/providers/ApplicationsProvider" path="packages/providers/ApplicationsProvider" revision="3347f31bd268ca3153abe5def9361f625bd73efd" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/providers/CalendarProvider" path="packages/providers/CalendarProvider" revision="0aeb094381148a08ae05c805f1c91a5c6b6e4900" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/providers/ContactsProvider" path="packages/providers/ContactsProvider" revision="60189cdce174667bf9c2a90fbf9e7a3b04d856e5" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/providers/DownloadProvider" path="packages/providers/DownloadProvider" revision="738782ffd27153884b8adeb3c797d7073c9c15ad" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/providers/MediaProvider" path="packages/providers/MediaProvider" revision="91c8bcc2e14d236c42a8a262100e11a5e06ddfb0" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/providers/PartnerBookmarksProvider" path="packages/providers/PartnerBookmarksProvider" revision="96d0a80af45923767baf449fc8c735c2f71d64ae" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/providers/TelephonyProvider" path="packages/providers/TelephonyProvider" revision="deb745d6ce5e2315acbd0b1028041ca08cc6fc5d" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/providers/UserDictionaryProvider" path="packages/providers/UserDictionaryProvider" revision="361f35b7b1fe758d93e0952536a298b2ed045a89" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/screensavers/Basic" path="packages/screensavers/Basic" revision="6117c111d7e09c6fad2d84368c3dac9566b4923c" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/screensavers/PhotoTable" path="packages/screensavers/PhotoTable" revision="53834361c8765879ce77ce708ad1ed2cafa2d678" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/screensavers/WebView" path="packages/screensavers/WebView" revision="6e0a80f6faed6191acc8ce1b6c79eada09e9e042" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/services/Telephony" path="packages/services/Telephony" revision="7e09c536edc36e50b561c5b633f5413948e5280f" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/wallpapers/Basic" path="packages/wallpapers/Basic" revision="bf6b3d826d417c5862ba4790877facf11fde08ac" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/wallpapers/Galaxy4" path="packages/wallpapers/Galaxy4" revision="ca92fdc25da99afdfe33447aefb2cd270c5b5e4d" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/wallpapers/HoloSpiral" path="packages/wallpapers/HoloSpiral" revision="98d244690f2f1fe1a28676aba4240eb29d6e967d" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/wallpapers/LinaroWallpaper" path="packages/wallpapers/LinaroWallpaper" revision="615db7ea966abc1323e3d6a4f38f7573840755d2" upstream="master"/>
+  <project groups="common" name="platform/packages/wallpapers/LivePicker" path="packages/wallpapers/LivePicker" revision="1834eb6330b5a19b10cc70957f834afc3d59f349" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/wallpapers/MagicSmoke" path="packages/wallpapers/MagicSmoke" revision="5fb10178b0d92900cfaf4f21d7a52c63b4195d2e" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/wallpapers/MusicVisualization" path="packages/wallpapers/MusicVisualization" revision="25ee68ea73c67058e7127873202549a60840c308" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/wallpapers/NoiseField" path="packages/wallpapers/NoiseField" revision="53db91c32eda6a5c46b5070d2db256bfb7c47018" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/packages/wallpapers/PhaseBeam" path="packages/wallpapers/PhaseBeam" revision="d820f2943126c7155e164436a1f059f426cfc935" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/pdk" path="pdk" revision="d440d4219412981df7ef90bed65acf29b2e7ea6a" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="darwin,common" name="platform/prebuilts/clang/darwin-x86/3.1" path="prebuilts/clang/darwin-x86/3.1" revision="426233405bef3c7c825095ab14256c3773894b9b" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="darwin,common" name="platform/prebuilts/clang/darwin-x86/3.2" path="prebuilts/clang/darwin-x86/3.2" revision="af856d77b3cbb1f6afccdc531bee991403c28907" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="linux,common" name="platform/prebuilts/clang/linux-x86/3.1" path="prebuilts/clang/linux-x86/3.1" revision="e95b4ce22c825da44d14299e1190ea39a5260bde" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="linux,common" name="platform/prebuilts/clang/linux-x86/3.2" path="prebuilts/clang/linux-x86/3.2" revision="471afab478649078ad7c75ec6b252481a59e19b8" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/prebuilts/devtools" path="prebuilts/devtools" revision="26bc76f48350da61f41d90f2f1a349aab59172ae" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/prebuilts/eclipse" path="prebuilts/eclipse" revision="76f99d69c6843137da55d1a28c81920ac453ec15" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="darwin,arm,common" name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.6" path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.6" revision="21b2cba584638ed5ffad8e3fd3e6808bfa299cf0" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common,pdk,darwin,arm" name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7" path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7" revision="26cb1865482ce3d9dd47ff5766180f3e7ade98ec" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="darwin,arm,common" name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.6" path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.6" revision="0f74cbc89b93c4db7fbf737f561cd69221f779a7" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common,pdk,darwin,arm" name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.7" path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.7" revision="9a80d8ace620a6ba1396bfef04ff97c476a7f8ee" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common,pdk,darwin" name="platform/prebuilts/gcc/darwin-x86/host/headers" path="prebuilts/gcc/darwin-x86/host/headers" revision="4ac4f7cc41cf3c9e36fc3d6cf37fd1cfa9587a68" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common,pdk,darwin" name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" path="prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" revision="21ae5b0545fb8db1b13c95ecd4c42545a39e2922" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="darwin,x86,common" name="platform/prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.6" path="prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.6" revision="042d6130038c95be86fcea5dddda2db07bd5aa27" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="pdk,darwin,x86,common" name="platform/prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.7" path="prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.7" revision="b8d6b5d787751a78c0a1d38f209037a933b2371b" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="linux,arm,common" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.6" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.6" revision="d73a051b1fd1d98f5c2463354fb67898f0090bdb" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="pdk,linux,arm,common" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" revision="8b880805d454664b3eed11d0f053cdeafa1ff06e" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="linux,arm,common" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6" revision="71c99ec3db1503a2124d5e287097d58b964deef7" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="pdk,linux,arm,common" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" revision="a1e239a0bb5cd1d69680bf1075883aa9a7bf2429" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="linux,arm,common" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7-linaro" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7-linaro" revision="a050f0f6e289250982d80dd209c120c6ed25ac0a" upstream="master"/>
+  <project groups="linux,arm,common" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8-linaro" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8-linaro" revision="3dce407fc3889b5582a6dddf3276fc7c76721a5a" upstream="master"/>
+  <project groups="linux,arm,common" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9-linaro" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9-linaro" revision="462ef5992e928a2113b3d189757e73acef58eeed" upstream="master"/>
+  <project groups="linux,common" name="platform/prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.4.3" path="prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.4.3" revision="10191e2f442c5409cb70783508658d474612a97e" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="linux,common" name="platform/prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6" path="prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6" revision="95bb5b66b3ec5769c3de8d3f25d681787418e7d2" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="linux,common" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6" revision="ebdad82e61c16772f6cd47e9f11936bf6ebe9aa0" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="linux,x86,common" name="platform/prebuilts/gcc/linux-x86/x86/i686-linux-android-4.6" path="prebuilts/gcc/linux-x86/x86/i686-linux-android-4.6" revision="b9ebba077c2f62e930b16240d7f3ad61f1ad1dfc" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="pdk,linux,x86,common" name="platform/prebuilts/gcc/linux-x86/x86/i686-linux-android-4.7" path="prebuilts/gcc/linux-x86/x86/i686-linux-android-4.7" revision="c7931763d41be602407ed9d71e2c0292c6597e00" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/prebuilts/gradle-plugin" path="prebuilts/gradle-plugin" revision="71348f05649f1658bcd323152da4534101949c81" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/prebuilts/maven_repo/android" path="prebuilts/maven_repo/android" revision="000d4c9580d8126d4d8ccbf24e6a5a0a1c88f494" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/prebuilts/misc" path="prebuilts/misc" revision="8446ac516fb6320eedd4e0b7522862661355e0a1" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/prebuilts/ndk" path="prebuilts/ndk" revision="c792f0bd9fff7aea2887c60bbb3a9bbdb534ffa3" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/prebuilts/qemu-kernel" path="prebuilts/qemu-kernel" revision="21a68e06a104be3f98d776a5bb34ec98643c5bc9" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/prebuilts/runtime" path="prebuilts/runtime" revision="cf91192a5e0014fe7b98827abbf6daf9337c472e" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/prebuilts/sdk" path="prebuilts/sdk" revision="cfcef469537869947abb9aa1d656774cc2678d4c" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common,pdk,tools" name="platform/prebuilts/tools" path="prebuilts/tools" revision="5a48c04c4bb5f079bc757e29864a42427378e051" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/sdk" path="sdk" revision="86de8a911717ce2581b2b8eafd4ad3fd86577e08" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/system/core" path="system/core" revision="b48125501a0aef43a16c63c2b2cc612fa5a0848b" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/system/extras" path="system/extras" revision="20148ca5ca0af5f16b12c0cf4835c756bfbe86bf" upstream="linaro_android_4.4.4"/>
+  <project groups="common" name="platform/system/media" path="system/media" revision="30bf0cc133ecab46b7999ac791ebe95d0c51d746" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/system/netd" path="system/netd" revision="f7635e290be7bf427736f3849981f12369dd5215" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/system/security" path="system/security" revision="ee8068b9e7bfb2770635062fc9c2035be2142bd8" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="platform/system/vold" path="system/vold" revision="8e33a620b4fdae92f4c463dfaea77811ca60f71c" upstream="linaro_android_4.4.4"/>
+  <project groups="tools,common" name="platform/tools/external/fat32lib" path="tools/external/fat32lib" revision="5b54b0e25a4b55fa6a180d225f8f1790fb63287b" upstream="refs/tags/android-4.4.4_r1"/>
+  <project groups="common" name="tools/idlestat" path="external/idlestat" remote="linaro-other" revision="afd613030e94016ec9154183a558b07e675f1d3c" upstream="android"/>
+  <project groups="pandaboard" name="waffle-gl/waffle" path="external/waffle" remote="github" revision="1650906a17bb22d8c60e93cc438df97548d3957a" upstream="master"/>
+</manifest>
+
