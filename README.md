@@ -7,6 +7,8 @@ Only those files I really had to change have been uploaded here.
 The project is based on Linaro Android 14.10. U-boot has been replaced by a newer version to get it running on both Pandaboard ES Rev. B2 and B3. 
 The sensor I used was a SRF02 connected via the I2C interface.
 
+What I've done, I described at 
+- Part 1 : Android Sensor Integration Part 1: Sensor Stack and Kernel Module
 
 
 
