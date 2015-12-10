@@ -8,7 +8,7 @@ The project is based on Linaro Android 14.10. U-boot has been replaced by a newe
 The sensor I used was a SRF02 connected via the I2C interface.
 
 What I've done, I described at 
-- Part 1 : Android Sensor Integration Part 1: Sensor Stack and Kernel Module
+- Part 1 : https://blog.inovex.de/android-sensor-integration-part-1-sensor-stack-and-kernel-module/
 
 
 
