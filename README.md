@@ -10,6 +10,8 @@ The sensor I used was a SRF02 connected via the I2C interface.
 What I've done, I described at 
 - Part 1 : https://blog.inovex.de/android-sensor-integration-part-1-sensor-stack-and-kernel-module/
 - Part 2 : https://blog.inovex.de/android-sensor-integration-part-2-sensor-readings/
+- Part 3 : https://blog.inovex.de/android-sensor-integration-part-3-hal/
+- Part 4 : https://blog.inovex.de/android-sensor-integration-part-4-the-android-sensor-framework/
 
 
 
